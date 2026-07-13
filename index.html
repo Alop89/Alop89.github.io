@@ -60,6 +60,28 @@
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
+        /* Arch Panel styling and hover */
+        .arch-panel {
+            background: rgba(20, 24, 33, 0.55);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 242, 254, 0.35);
+            transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .arch-panel:hover {
+            border-color: #ff007f;
+            box-shadow: 0 0 10px rgba(255, 0, 127, 0.15);
+            transform: translateY(-4px);
+        }
+
+        /* Comparative section panels override styling */
+        .comparative-panel {
+            background: rgba(18, 22, 33, 0.65) !important;
+            backdrop-filter: blur(10px) !important;
+            -webkit-backdrop-filter: blur(10px) !important;
+        }
+
         /* Hover animations */
         .hover-cyan:hover {
             border-color: rgba(0, 229, 255, 0.3);
@@ -154,8 +176,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                 <!-- Problema 1 -->
-                <div
-                    class="glass-panel p-8 rounded-xl border border-white/[0.05] hover:border-white/10 transition-colors">
+                <div class="arch-panel p-8 rounded-xl">
                     <div class="font-mono text-xs text-white/30 mb-4">[ FLAW_01 // GOBERNANZA ]</div>
                     <h3 class="text-xl font-bold text-white mb-3">El Laberinto de Excel</h3>
                     <p class="text-silverText text-sm leading-relaxed">
@@ -165,8 +186,7 @@
                 </div>
 
                 <!-- Problema 2 -->
-                <div
-                    class="glass-panel p-8 rounded-xl border border-white/[0.05] hover:border-white/10 transition-colors">
+                <div class="arch-panel p-8 rounded-xl">
                     <div class="font-mono text-xs text-white/30 mb-4">[ FLAW_02 // RENTABILIDAD ]</div>
                     <h3 class="text-xl font-bold text-white mb-3">Fugas y Margen Ciego</h3>
                     <p class="text-silverText text-sm leading-relaxed">
@@ -176,8 +196,7 @@
                 </div>
 
                 <!-- Problema 3 -->
-                <div
-                    class="glass-panel p-8 rounded-xl border border-white/[0.05] hover:border-white/10 transition-colors">
+                <div class="arch-panel p-8 rounded-xl">
                     <div class="font-mono text-xs text-white/30 mb-4">[ FLAW_03 // COSTO SAAS ]</div>
                     <h3 class="text-xl font-bold text-white mb-3">Cuotas mensuales por servicios básicos</h3>
                     <p class="text-silverText text-sm leading-relaxed">
@@ -209,7 +228,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
 
                 <!-- LVL 01: Data Flash -->
-                <div class="glass-panel hover-cyan rounded-2xl p-8 flex flex-col justify-between h-full">
+                <div class="arch-panel rounded-2xl p-8 flex flex-col justify-between h-full">
                     <div class="flex-grow flex flex-col">
                         <div class="flex justify-between items-center mb-6">
                             <span
@@ -254,7 +273,7 @@
                 </div>
 
                 <!-- LVL 02: Neon Grid -->
-                <div class="glass-panel hover-magenta rounded-2xl p-8 flex flex-col justify-between h-full">
+                <div class="arch-panel rounded-2xl p-8 flex flex-col justify-between h-full">
                     <div class="flex-grow flex flex-col">
                         <div class="flex justify-between items-center mb-6">
                             <span
@@ -301,7 +320,7 @@
                 </div>
 
                 <!-- LVL 03: Core Loop -->
-                <div class="glass-panel hover-cyan rounded-2xl p-8 flex flex-col justify-between h-full">
+                <div class="arch-panel rounded-2xl p-8 flex flex-col justify-between h-full">
                     <div class="flex-grow flex flex-col">
                         <div class="flex justify-between items-center mb-6">
                             <span
@@ -347,7 +366,7 @@
                 </div>
 
                 <!-- LVL 04: Mainframe -->
-                <div class="glass-panel hover-magenta rounded-2xl p-8 flex flex-col justify-between h-full">
+                <div class="arch-panel rounded-2xl p-8 flex flex-col justify-between h-full">
                     <div class="flex-grow flex flex-col">
                         <div class="flex justify-between items-center mb-6">
                             <span
@@ -425,28 +444,28 @@
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="glass-panel p-6 rounded-xl">
+                    <div class="arch-panel p-6 rounded-xl">
                         <div class="font-mono text-2xl font-bold text-white mb-2">01.</div>
                         <h4 class="text-white font-bold text-sm mb-2">Extracción y Limpieza</h4>
                         <p class="text-silverText text-xs leading-relaxed">Conectores automáticos para unificar fuentes
-                            desorganizadas sin interrumpir la operación actual.</p>
+                            desorganizadas sin interrumpir la operation actual.</p>
                     </div>
 
-                    <div class="glass-panel p-6 rounded-xl">
+                    <div class="arch-panel p-6 rounded-xl">
                         <div class="font-mono text-2xl font-bold text-white mb-2">02.</div>
                         <h4 class="text-white font-bold text-sm mb-2">Pipelines ETL</h4>
                         <p class="text-silverText text-xs leading-relaxed">Tuberías inteligentes desarrolladas en Python
                             para procesar métricas de rentabilidad y stock en tiempo real.</p>
                     </div>
 
-                    <div class="glass-panel p-6 rounded-xl">
+                    <div class="arch-panel p-6 rounded-xl">
                         <div class="font-mono text-2xl font-bold text-white mb-2">03.</div>
                         <h4 class="text-white font-bold text-sm mb-2">Paneles Streamlit</h4>
                         <p class="text-silverText text-xs leading-relaxed">Interfaces minimalistas y directivas libres
                             de rentas. Tu equipo accede sin límites de usuarios.</p>
                     </div>
 
-                    <div class="glass-panel p-6 rounded-xl">
+                    <div class="arch-panel p-6 rounded-xl">
                         <div class="font-mono text-2xl font-bold text-white mb-2">04.</div>
                         <h4 class="text-white font-bold text-sm mb-2">Reporte de hallazgos</h4>
                         <p class="text-silverText text-xs leading-relaxed">Reuniones directivas mensuales para auditar
@@ -494,7 +513,7 @@
             <!-- Side by Side Layout -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                 <!-- Tradicional -->
-                <div class="glass-panel p-8 rounded-xl border border-red-500/10 bg-red-500/[0.01]">
+                <div class="arch-panel comparative-panel p-8 rounded-xl">
                     <h4 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
                         <span class="text-red-500 text-xl">✕</span> Software Comercial Tradicional
                     </h4>
@@ -507,7 +526,7 @@
                 </div>
 
                 <!-- ArchData -->
-                <div class="glass-panel p-8 rounded-xl border border-neonCyan/20 bg-neonCyan/[0.01]">
+                <div class="arch-panel comparative-panel p-8 rounded-xl">
                     <h4 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
                         <span class="text-neonCyan text-xl">✓</span> Ingeniería Open Source ArchData
                     </h4>
@@ -522,21 +541,21 @@
 
             <!-- Monospace Statistics -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div class="glass-panel py-8 rounded-xl">
+                <div class="arch-panel py-8 rounded-xl">
                     <span class="block font-mono text-3xl font-extrabold text-neonCyan mb-1">>90%</span>
                     <span class="font-mono text-[10px] text-silverText uppercase tracking-wider">Ahorro en
                         Licencias</span>
                 </div>
-                <div class="glass-panel py-8 rounded-xl">
+                <div class="arch-panel py-8 rounded-xl">
                     <span class="block font-mono text-3xl font-extrabold text-white mb-1">&lt;72h</span>
                     <span class="font-mono text-[10px] text-silverText uppercase tracking-wider">Tiempo de
                         Diagnóstico</span>
                 </div>
-                <div class="glass-panel py-8 rounded-xl">
+                <div class="arch-panel py-8 rounded-xl">
                     <span class="block font-mono text-3xl font-extrabold text-white mb-1">CERO</span>
                     <span class="font-mono text-[10px] text-silverText uppercase tracking-wider">Rentas Ocultas</span>
                 </div>
-                <div class="glass-panel py-8 rounded-xl">
+                <div class="arch-panel py-8 rounded-xl">
                     <span class="block font-mono text-3xl font-extrabold text-neonMagenta mb-1">100%</span>
                     <span class="font-mono text-[10px] text-silverText uppercase tracking-wider">Activos Tuyos</span>
                 </div>
