@@ -53,10 +53,10 @@
 
         /* Glassmorphism utility */
         .glass-panel {
-            background: rgba(11, 11, 15, 0.6);
+            background: rgba(20, 24, 33, 0.55);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 242, 254, 0.15);
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -76,7 +76,8 @@
         /* Subtle grid background */
         .grid-bg {
             background-image: linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
-            background-size: 50px 50px;
+            background-size: 64px 64px;
+            background-position: center top;
         }
     </style>
 </head>
@@ -230,8 +231,8 @@
                 </div>
 
                 <!-- LVL 02: Neon Grid (Col-span-8 / Horizontal Card) -->
-                <div class="glass-panel hover-magenta lg:col-span-8 rounded-2xl p-8 flex flex-col md:flex-row justify-between gap-8">
-                    <div class="flex-grow flex flex-col justify-between">
+                <div class="glass-panel hover-magenta lg:col-span-8 rounded-2xl p-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                    <div class="flex flex-col justify-between h-full">
                         <div>
                             <div class="flex justify-between md:justify-start items-center gap-4 mb-6">
                                 <span class="font-mono text-xs text-neonMagenta bg-neonMagenta/10 border border-neonMagenta/20 px-2 py-0.5 rounded">[ LVL-02 ]</span>
@@ -240,7 +241,7 @@
                             <h3 class="text-3xl font-bold text-white mb-2">Neon Grid</h3>
                             <span class="font-mono text-xs text-silverText block mb-6 uppercase tracking-wider">Centro de Mando Corporativo (Cero Licencias)</span>
                             
-                            <p class="text-silverText text-sm leading-relaxed mb-6 max-w-xl">
+                            <p class="text-silverText text-sm leading-relaxed mb-6">
                                 Ingeniería integral de datos y desarrollo de una aplicación web interactiva a la medida (Python + Streamlit). Centralizamos tus silos de información en un servidor privado virtual (VPS) de tu propiedad, optimizado para la velocidad y libre de rentas mensuales por visualizador.
                             </p>
                         </div>
@@ -258,7 +259,7 @@
                         </div>
                     </div>
 
-                    <div class="w-full md:w-80 flex flex-col justify-between shrink-0">
+                    <div class="w-full flex flex-col justify-between h-full">
                         <!-- Dashboard Visual Preview -->
                         <div class="mb-6 rounded-lg overflow-hidden border border-white/5 bg-deepVoid p-2">
                             <img src="images/dash_v1.0.png" alt="Neon Grid Dashboard Preview" class="w-full h-32 object-cover rounded opacity-80 hover:opacity-100 transition-opacity">
@@ -521,7 +522,7 @@
                     <!-- REPLACE '524771234567' WITH YOUR ACTUAL PHONE NUMBER -->
                     <a href="https://wa.me/524771234567?text=Hola%20CEO%20de%20ArchData%2C%20quiero%20agendar%20mi%20Llamada%20de%20Diagn%C3%B3stico%20T%C3%A1ctico%20de%2015%20minutos." 
                        target="_blank" 
-                       class="flex items-center justify-center gap-3 bg-[#00E5FF] hover:bg-[#00E5FF]/90 text-deepVoid font-bold text-sm font-mono tracking-wider py-4 px-6 rounded transition-all duration-300 shadow-[0_0_20px_rgba(0,229,255,0.2)]">
+                       class="flex items-center justify-center gap-3 bg-[rgba(0,0,0,0.4)] border border-[#00f2fe]/30 hover:border-[#00f2fe] text-[#00f2fe] font-bold text-sm font-mono tracking-wider py-4 px-6 rounded transition-all duration-300 hover:shadow-[0_0_15px_rgba(0,242,254,0.4)]">
                         <span>💬</span> AGENDAR DIAGNÓSTICO VÍA WHATSAPP
                     </a>
 
